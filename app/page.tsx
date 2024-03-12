@@ -1,7 +1,14 @@
+import VideoHero from "@/components/VideoHero/VideoHero";
+
 export default function Home() {
   return (
-    <main className=" flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hello world</h1>
+    <main className="w-screen">
+      <img
+        src="/svg/eyzar-white.svg"
+        alt="afyq eyzar"
+        className="absolute inset-0 m-auto w-[85vw]"
+      />
+      <VideoHero />
     </main>
   );
 }
