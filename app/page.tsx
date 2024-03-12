@@ -2,7 +2,7 @@ import VideoHero from "@/components/VideoHero/VideoHero";
 
 export default function Home() {
   return (
-    <main className="w-screen">
+    <main className="h-screen w-screen">
       <img
         src="/svg/eyzar-white.svg"
         alt="afyq eyzar"
