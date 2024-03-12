@@ -7,6 +7,7 @@ const VideoHero = () => {
       autoPlay
       muted
       loop
+      playsInline
       className="h-full w-full object-cover"
     >
       <source src={"/videos/website-video.mp4"} type="video/mp4" />
