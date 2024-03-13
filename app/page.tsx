@@ -56,11 +56,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="z-50 h-screen bg-slate-50 p-3" id="bio">
-        <h1 className="text-7xl" id="bio-title">
-          here is my bio
+      <section
+        className="z-50 h-screen overflow-hidden bg-gray-900 bg-opacity-[98%] px-4"
+        id="bio"
+      >
+        <h1
+          className="mt-[-3.5rem] text-[7rem] font-semibold uppercase text-stone-50 sm:mt-[-7rem] sm:text-[15rem]"
+          id="bio-title"
+        >
+          links
         </h1>
-        <a href="#">link to somewhere</a>
+        <div className="flex flex-col">
+          <a href="#" className="pb-3 text-3xl text-stone-50">
+            spotify
+          </a>
+          <a href="#" className="pb-3 text-3xl text-stone-50">
+            apple music
+          </a>
+          <a href="#" className="pb-3 text-3xl text-stone-50">
+            youtube
+          </a>
+          <a href="#" className="pb-3 text-3xl text-stone-50">
+            instagram
+          </a>
+          <a href="#" className="pb-3 text-3xl text-stone-50">
+            tiktok
+          </a>
+        </div>
       </section>
     </main>
   );
