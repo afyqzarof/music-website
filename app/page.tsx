@@ -90,7 +90,7 @@ export default function Home() {
         </h1>
         <ul className="mt-6 flex h-1/2 flex-col justify-between">
           {links.map((item) => (
-            <li>
+            <li key={item.name}>
               <a
                 href={item.link}
                 target="_blank"
