@@ -36,6 +36,28 @@ export default function Home() {
       },
     );
   });
+  const links = [
+    {
+      link: "https://open.spotify.com/artist/3RZ37emJIH1jGRd2stTHWz?si=OoYxZ89mRo-5rhBpGxwGpA",
+      name: "spotify",
+    },
+    {
+      link: "https://music.apple.com/us/artist/afyq-eyzar/1486835866",
+      name: "apple music",
+    },
+    {
+      link: "https://youtube.com/@nuclear.instruments",
+      name: "youtube",
+    },
+    {
+      link: "https://www.instagram.com/nuclear.instruments/",
+      name: "instagram",
+    },
+    {
+      link: "https://www.tiktok.com/@nuclear.instruments",
+      name: "tiktok",
+    },
+  ];
   return (
     <main className="h-[200dvh] sm:h-[200vh]">
       <section className="video fixed h-[100dvh] w-screen sm:h-screen">
@@ -57,7 +79,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="z-50 h-screen overflow-hidden bg-gray-900 bg-opacity-[98%] px-4"
+        className="z-50 h-screen overflow-hidden bg-red-900 bg-opacity-[98%] px-4"
         id="bio"
       >
         <h1
@@ -66,23 +88,19 @@ export default function Home() {
         >
           links
         </h1>
-        <div className="flex flex-col">
-          <a href="#" className="pb-3 text-3xl text-stone-50">
-            spotify
-          </a>
-          <a href="#" className="pb-3 text-3xl text-stone-50">
-            apple music
-          </a>
-          <a href="#" className="pb-3 text-3xl text-stone-50">
-            youtube
-          </a>
-          <a href="#" className="pb-3 text-3xl text-stone-50">
-            instagram
-          </a>
-          <a href="#" className="pb-3 text-3xl text-stone-50">
-            tiktok
-          </a>
-        </div>
+        <ul className="mt-6 flex h-1/2 flex-col justify-between">
+          {links.map((item) => (
+            <li>
+              <a
+                href={item.link}
+                target="_blank"
+                className="ml-4 pb-3 text-6xl text-stone-50 hover:text-yellow-400 sm:text-7xl"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );
