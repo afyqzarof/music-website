@@ -8,12 +8,7 @@ export default function Home() {
     <main className="relative h-[200dvh] sm:h-[200vh]">
       <section className="fixed block h-[100dvh] w-screen sm:h-screen">
         <div className="relative h-full w-full">
-          {/* <img
-            src="/svg/eyzar-white.svg"
-            alt="afyq eyzar"
-            className="absolute inset-0 m-auto w-[85vw]"
-          /> */}
-          <div className="absolute inset-0 flex justify-center">
+          <div className="absolute inset-0 z-30 flex justify-center">
             <SvgComponent />
           </div>
           <VideoHero />

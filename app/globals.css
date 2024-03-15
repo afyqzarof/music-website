@@ -15,3 +15,22 @@
     text-wrap: balance;
   }
 }
+
+/* #a1 {
+  animation: col 1s linear infinite;
+}
+
+@keyframes col {
+  0%,
+  25% {
+    fill: white;
+  }
+  26%,
+  50% {
+    fill: rgb(255, 126, 126);
+  }
+  51%,
+  100% {
+    fill: white;
+  }
+} */
