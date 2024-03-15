@@ -20,9 +20,15 @@ const Arrow = () => {
   });
   return (
     <img
+      onClick={() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }}
       src="/svg/arrow-down.svg"
       alt="arrow down"
-      className="h-24 sm:h-[8rem]"
+      className="h-24 cursor-pointer sm:h-[8rem]"
       id="arrow"
     />
   );

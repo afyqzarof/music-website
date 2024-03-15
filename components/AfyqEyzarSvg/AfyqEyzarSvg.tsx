@@ -36,6 +36,9 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
       onMouseEnter: () => {
         changeColor(id, toColor[id]);
       },
+      onClick: () => {
+        changeColor(id, toColor[id]);
+      },
       fill: color[id],
     };
   };
