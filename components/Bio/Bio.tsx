@@ -61,11 +61,11 @@ const Bio = () => {
   ];
   return (
     <section
-      className="z-50 h-screen max-h-screen overflow-hidden bg-red-900 bg-opacity-[98%] px-4"
+      className="z-10 h-screen max-h-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
       id="bio"
     >
       <h1
-        className="mt-[-3.5rem] text-[7rem] font-semibold uppercase text-stone-50 sm:mt-[-7rem] sm:text-[15rem]"
+        className="mt-[-3.5rem] text-[7rem] font-normal uppercase text-yellow-400 sm:mt-[-7rem] sm:text-[15rem]"
         id="bio-title"
       >
         links
@@ -77,7 +77,7 @@ const Bio = () => {
               <a
                 href={item.link}
                 target="_blank"
-                className="pb-3 text-6xl text-stone-50 hover:text-yellow-400 sm:text-7xl"
+                className="pb-3 text-6xl font-bold text-yellow-400 hover:text-green-600 sm:text-7xl"
               >
                 {item.name}
               </a>
