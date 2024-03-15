@@ -3,7 +3,12 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Model } from "../Sunflower/Sunflower";
 
-const Scene = ({ scale, position, zoom }) => {
+type SceneProps = {
+  scale: [number, number, number];
+  position: [number, number, number];
+  zoom: number;
+};
+const Scene = ({ scale, position, zoom }: SceneProps) => {
   return (
     <Canvas
       flat
