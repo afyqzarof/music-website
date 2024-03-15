@@ -26,7 +26,7 @@ const Bio = () => {
   ];
   return (
     <section
-      className="absolute bottom-0 z-10 h-screen max-h-screen w-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
+      className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
       id="bio"
     >
       <h1
@@ -55,7 +55,7 @@ const Bio = () => {
       </div>
 
       <div className="h-full w-full sm:hidden">
-        <Scene scale={[1.2, 1.2, 1.2]} position={[12, 0, 12]} zoom={1} />
+        <Scene scale={[1.2, 1.2, 1.2]} position={[0, 0, 12]} zoom={1} />
       </div>
     </section>
   );
