@@ -1,29 +1,7 @@
-"use client";
 import React from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import Scene from "../Scene/Scene";
 
-gsap.registerPlugin(ScrollTrigger);
 const Bio = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      "#bio",
-      {
-        y: "100vh",
-      },
-      {
-        y: "100vh",
-        duration: 5,
-        scrollTrigger: {
-          trigger: "#bio-title",
-          toggleActions: "restart none none none",
-          scrub: true,
-        },
-      },
-    );
-  });
   const links = [
     {
       link: "https://open.spotify.com/artist/3RZ37emJIH1jGRd2stTHWz?si=OoYxZ89mRo-5rhBpGxwGpA",
@@ -48,7 +26,7 @@ const Bio = () => {
   ];
   return (
     <section
-      className="z-10 h-screen max-h-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
+      className="absolute bottom-0 z-10 h-screen max-h-screen w-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
       id="bio"
     >
       <h1

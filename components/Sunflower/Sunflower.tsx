@@ -1,13 +1,59 @@
+import * as THREE from "three";
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useAnimations } from "@react-three/drei";
+import { GLTF } from "three-stdlib";
 import { useFrame } from "@react-three/fiber";
 
-export function Model(props) {
-  const group = useRef(null);
-  const { nodes, materials } = useGLTF("/sunflower.glb");
+type GLTFResult = GLTF & {
+  nodes: {
+    Plane: THREE.Mesh;
+    black_core: THREE.Mesh;
+    Cone: THREE.Mesh;
+    Cylinder: THREE.Mesh;
+    Plane001: THREE.Mesh;
+    Plane002: THREE.Mesh;
+    Plane003: THREE.Mesh;
+    Plane004: THREE.Mesh;
+    Plane005: THREE.Mesh;
+    Plane006: THREE.Mesh;
+    Plane007: THREE.Mesh;
+    Plane008: THREE.Mesh;
+  };
+  materials: {
+    ["Material.002"]: THREE.MeshStandardMaterial;
+    ["Material.001"]: THREE.MeshStandardMaterial;
+    ["Material.003"]: THREE.MeshStandardMaterial;
+    ["Material.004"]: THREE.MeshStandardMaterial;
+  };
+  animations: GLTFAction[];
+};
+
+type ActionName =
+  | "CircleAction"
+  | "ConeAction"
+  | "CylinderAction"
+  | "Plane.002Action"
+  | "Plane.005Action"
+  | "Plane.006Action"
+  | "Plane.007Action"
+  | "Plane.008Action";
+interface GLTFAction extends THREE.AnimationClip {
+  name: ActionName;
+}
+type ContextType = Record<
+  string,
+  React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
+>;
+
+export function Model(props: JSX.IntrinsicElements["group"]) {
+  const group = useRef<THREE.Group>();
+  const { nodes, materials, animations } = useGLTF(
+    "/sunflower.glb",
+  ) as GLTFResult;
+  const { actions } = useAnimations(animations, group);
 
   useFrame(() => {
-    if (!group) {
+    if (!group.current) {
       return;
     }
 
@@ -15,7 +61,7 @@ export function Model(props) {
   });
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene" position={[0, 2.5, 0]}>
+      <group name="Scene">
         <mesh
           name="Plane"
           geometry={nodes.Plane.geometry}

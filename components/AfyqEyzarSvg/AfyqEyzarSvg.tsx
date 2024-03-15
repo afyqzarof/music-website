@@ -85,10 +85,10 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
         />
       </g>
       {/* <defs>
-      <clipPath id="clip0_3_3">
-        <rect width={350} height={66} fill="white" />
-      </clipPath>
-    </defs> */}
+        <clipPath id="clip0_3_3">
+          <rect width={350} height={66} fill="white" />
+        </clipPath>
+      </defs> */}
     </svg>
   );
 };

@@ -5,8 +5,8 @@ import Arrow from "@/components/Arrow/Arrow";
 
 export default function Home() {
   return (
-    <main className="h-[200dvh] sm:h-[200vh]">
-      <section className="video fixed h-[100dvh] w-screen sm:h-screen">
+    <main className="relative h-[200dvh] sm:h-[200vh]">
+      <section className="fixed block h-[100dvh] w-screen sm:h-screen">
         <div className="relative h-full w-full">
           {/* <img
             src="/svg/eyzar-white.svg"
