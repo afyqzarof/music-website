@@ -8,19 +8,6 @@ import Scene from "../Scene/Scene";
 gsap.registerPlugin(ScrollTrigger);
 const Bio = () => {
   useGSAP(() => {
-    const startTime = 5;
-    const tl = gsap.timeline({ repeat: -1 });
-    gsap.from("#arrow", {
-      opacity: 0,
-      duration: startTime,
-      ease: "power3.out",
-    });
-    tl.to("#arrow", { y: 15, duration: 1 });
-    tl.to("#arrow", { y: 0, duration: 1 });
-    tl.to("#arrow", { y: 15, duration: 1 });
-    tl.to("#arrow", { y: 0, duration: 1 });
-    tl.startTime(startTime);
-
     gsap.fromTo(
       "#bio",
       {
