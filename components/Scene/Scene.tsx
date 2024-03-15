@@ -3,12 +3,12 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Model } from "../Sunflower/Sunflower";
 
-const Scene = () => {
+const Scene = ({ scale, position, zoom }) => {
   return (
     <Canvas
       flat
       dpr={[1, 2]}
-      camera={{ position: [12, 0, 12], rotation: [0, 0, 180] }}
+      camera={{ position, rotation: [0, 0, 180], zoom }}
     >
       <ambientLight intensity={4} />
       <OrbitControls
@@ -18,7 +18,7 @@ const Scene = () => {
         maxPolarAngle={1.57079}
       />
 
-      <Model scale={[1.2, 1.2, 1.2]} />
+      <Model scale={scale} />
     </Canvas>
   );
 };

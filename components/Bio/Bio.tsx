@@ -71,7 +71,7 @@ const Bio = () => {
         links
       </h1>
       <div className="sm:flex sm:h-full">
-        <ul className=" mt-6 h-1/2 pl-3">
+        <ul className="mt-6 h-1/2 pl-3 sm:min-w-[28rem]">
           {links.map((item) => (
             <li key={item.name} className="mb-6">
               <a
@@ -84,13 +84,13 @@ const Bio = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden h-full flex-1 sm:block">
-          <Scene />
+        <div className="hidden h-full w-full sm:block">
+          <Scene scale={[2, 2, 2]} position={[35, 70, 12]} zoom={3} />
         </div>
       </div>
 
       <div className="h-full w-full sm:hidden">
-        <Scene />
+        <Scene scale={[1.2, 1.2, 1.2]} position={[12, 0, 12]} zoom={1} />
       </div>
     </section>
   );
