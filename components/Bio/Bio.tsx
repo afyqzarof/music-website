@@ -29,12 +29,12 @@ const Bio = () => {
       className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
       id="bio"
     >
-      <h1
+      {/* <h1
         className="mt-[-3.5rem] text-[7rem] font-normal uppercase text-yellow-400 sm:mt-[-7rem] sm:text-[15rem]"
         id="bio-title"
       >
         links
-      </h1>
+      </h1> */}
       <div className="sm:flex sm:h-full">
         <ul className="mt-6 h-1/2 pl-3 sm:min-w-[28rem]">
           {links.map((item) => (
@@ -42,7 +42,7 @@ const Bio = () => {
               <a
                 href={item.link}
                 target="_blank"
-                className="pb-3 text-6xl font-bold text-yellow-400 hover:text-green-600 sm:text-7xl"
+                className="pb-3 text-6xl font-bold uppercase text-yellow-400 hover:text-green-600 sm:text-6xl"
               >
                 {item.name}
               </a>
@@ -50,7 +50,7 @@ const Bio = () => {
           ))}
         </ul>
         <div className="hidden h-full w-full sm:block">
-          <Scene scale={[2, 2, 2]} position={[35, 70, 12]} zoom={3} />
+          <Scene scale={[2, 2, 2]} position={[35, 70, 12]} zoom={6} />
         </div>
       </div>
 

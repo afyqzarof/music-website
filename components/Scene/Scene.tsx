@@ -8,8 +8,9 @@ type SceneProps = {
   scale: [number, number, number];
   position: [number, number, number];
   zoom: number;
+  sunflowerPosition?: [number, number, number];
 };
-const Scene = ({ scale, position, zoom }: SceneProps) => {
+const Scene = ({ scale, position, zoom, sunflowerPosition }: SceneProps) => {
   return (
     <Canvas
       flat
