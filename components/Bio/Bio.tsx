@@ -26,23 +26,17 @@ const Bio = () => {
   ];
   return (
     <section
-      className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70 px-4 backdrop-blur-xl"
+      className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70 p-6 px-4 backdrop-blur-xl"
       id="bio"
     >
-      {/* <h1
-        className="mt-[-3.5rem] text-[7rem] font-normal uppercase text-yellow-400 sm:mt-[-7rem] sm:text-[15rem]"
-        id="bio-title"
-      >
-        links
-      </h1> */}
       <div className="sm:flex sm:h-full">
-        <ul className="mt-6 h-1/2 pl-3 sm:min-w-[28rem]">
+        <ul className="h-1/2 pl-3 sm:min-w-[28rem]">
           {links.map((item) => (
             <li key={item.name} className="mb-6">
               <a
                 href={item.link}
                 target="_blank"
-                className="pb-3 text-6xl font-bold uppercase text-yellow-400 hover:text-green-600 sm:text-6xl"
+                className="pb-3 text-5xl font-light uppercase text-[#e5dc28] hover:text-[#33e52a] sm:text-6xl"
               >
                 {item.name}
               </a>

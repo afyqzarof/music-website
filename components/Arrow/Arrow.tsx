@@ -5,18 +5,7 @@ import React, { useState } from "react";
 
 const Arrow = () => {
   const [color, setColor] = useState("white");
-  const colors = [
-    "white",
-    "pink",
-    "yellow",
-    "blue",
-    "#43A6C6",
-    "purple",
-    "green",
-    "red",
-    "orange",
-    "violet",
-  ];
+  const colors = ["#2ae57e", "#33e52a", "#90e52a", "#18e7e7", "white"];
   const randomColor = () => {
     const index = Math.floor(Math.random() * colors.length);
     return colors[index];
@@ -24,20 +13,20 @@ const Arrow = () => {
   useGSAP(() => {
     const startTime = 4;
     const tl = gsap.timeline({ repeat: -1 });
-    gsap.from("#arrow", {
-      opacity: 0,
-      duration: startTime,
-      ease: "power3.out",
-    });
+    // gsap.from("#arrow", {
+    //   opacity: 0,
+    //   duration: startTime,
+    //   ease: "power3.out",
+    // });
     tl.to("#arrow", { y: 15, duration: 1 });
     tl.to("#arrow", { y: 0, duration: 1 });
     tl.to("#arrow", { y: 15, duration: 1 });
     tl.to("#arrow", { y: 0, duration: 1 });
-    tl.startTime(startTime);
+    // tl.startTime(startTime);
   });
   return (
     <div
-      className="h-24 cursor-pointer transition-all hover:h-[9rem] sm:h-[8rem]"
+      className="h-[5rem] cursor-pointer transition-all hover:h-[7rem] sm:h-[6rem]"
       id="arrow"
       onClick={() => {
         setColor(randomColor());

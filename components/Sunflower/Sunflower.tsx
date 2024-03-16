@@ -76,20 +76,20 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
           position={[-0.629, 3.704, 0.61]}
           rotation={[0, 0, 1.583]}
         />
-        <mesh
+        {/* <mesh
           name="Cone"
           geometry={nodes.Cone.geometry}
           material={materials["Material.003"]}
           position={[-0.782, 3.768, 0.584]}
           scale={[0.338, 1.122, 0.937]}
-        />
-        <mesh
+        /> */}
+        {/* <mesh
           name="Cylinder"
           geometry={nodes.Cylinder.geometry}
-          material={materials["Material.004"]}
+          // material={materials["Material.004"]}
           position={[-1.173, 1.927, 0.398]}
           scale={[0.929, 2.015, 1.26]}
-        />
+        /> */}
         <mesh
           name="Plane001"
           geometry={nodes.Plane001.geometry}

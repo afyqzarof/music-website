@@ -21,8 +21,8 @@ const Scene = ({ scale, position, zoom, sunflowerPosition }: SceneProps) => {
       <OrbitControls
         makeDefault
         enableZoom={false}
-        minPolarAngle={1.57079}
-        maxPolarAngle={1.57079}
+        // minPolarAngle={1.57079}
+        // maxPolarAngle={1.57079}
       />
 
       <Model scale={scale} />

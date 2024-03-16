@@ -2,16 +2,10 @@
 import { useState } from "react";
 import { SVGProps } from "react";
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
-  const toColor = {
-    a1: "pink",
-    f: "yellow",
-    y1: "blue",
-    q: "#43A6C6",
-    e: "purple",
-    y2: "green",
-    z: "red",
-    a2: "orange",
-    r: "violet",
+  const colors = ["#2ae57e", "#33e52a", "#90e52a", "#18e7e7", "white"];
+  const getRandomColor = () => {
+    const index = Math.floor(Math.random() * colors.length);
+    return colors[index];
   };
   const [color, setColor] = useState({
     a1: "white",
@@ -27,24 +21,24 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
   const changeColor = (id: string, newColor: string) => {
     setColor({
       ...color,
-      [id]: color[id] === "white" ? newColor : "white",
+      [id]: newColor,
     });
   };
 
   const handleHover = (id: string) => {
     return {
       onMouseEnter: () => {
-        changeColor(id, toColor[id]);
+        changeColor(id, getRandomColor());
       },
       onClick: () => {
-        changeColor(id, toColor[id]);
+        changeColor(id, getRandomColor());
       },
       fill: color[id],
     };
   };
   return (
     <svg
-      width={"85%"}
+      className="w-[85%] sm:w-[70%]"
       viewBox="0 0 350 66"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
