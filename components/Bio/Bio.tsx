@@ -26,11 +26,11 @@ const Bio = () => {
   ];
   return (
     <section
-      className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70 p-6 px-4 backdrop-blur-xl"
+      className="absolute bottom-0 z-10 h-screen min-h-screen w-screen overflow-hidden bg-black bg-opacity-70  backdrop-blur-xl"
       id="bio"
     >
       <div className="sm:flex sm:h-full">
-        <ul className="h-1/2 pl-3 sm:min-w-[28rem]">
+        <ul className="h-1/2 p-6 sm:min-w-[28rem]">
           {links.map((item) => (
             <li key={item.name} className="mb-6">
               <a
@@ -44,12 +44,12 @@ const Bio = () => {
           ))}
         </ul>
         <div className="hidden h-full w-full sm:block">
-          <Scene scale={[2, 2, 2]} position={[35, 70, 12]} zoom={6} />
+          <Scene position={[0, 0, 5]} zoom={1} />
         </div>
       </div>
 
       <div className="h-full w-full sm:hidden">
-        <Scene scale={[1.2, 1.2, 1.2]} position={[0, 0, 12]} zoom={1} />
+        <Scene position={[0, 0, 5]} zoom={1} />
       </div>
     </section>
   );

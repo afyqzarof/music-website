@@ -2,15 +2,13 @@
 import React from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Model } from "../Sunflower/Sunflower";
+import { Model } from "../Sunflower/Sunflower2";
 
 type SceneProps = {
-  scale: [number, number, number];
   position: [number, number, number];
   zoom: number;
-  sunflowerPosition?: [number, number, number];
 };
-const Scene = ({ scale, position, zoom, sunflowerPosition }: SceneProps) => {
+const Scene = ({ position, zoom }: SceneProps) => {
   return (
     <Canvas
       flat
@@ -18,14 +16,9 @@ const Scene = ({ scale, position, zoom, sunflowerPosition }: SceneProps) => {
       camera={{ position, rotation: [0, 0, 180], zoom }}
     >
       <ambientLight intensity={4} />
-      <OrbitControls
-        makeDefault
-        enableZoom={false}
-        // minPolarAngle={1.57079}
-        // maxPolarAngle={1.57079}
-      />
+      <OrbitControls makeDefault enableZoom={false} />
 
-      <Model scale={scale} />
+      <Model />
     </Canvas>
   );
 };
