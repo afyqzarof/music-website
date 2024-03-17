@@ -6,15 +6,10 @@ import { Model } from "../Sunflower/Sunflower2";
 
 type SceneProps = {
   position: [number, number, number];
-  zoom: number;
 };
-const Scene = ({ position, zoom }: SceneProps) => {
+const Scene = ({ position }: SceneProps) => {
   return (
-    <Canvas
-      flat
-      dpr={[1, 2]}
-      camera={{ position, rotation: [0, 0, 180], zoom }}
-    >
+    <Canvas flat dpr={[1, 2]} camera={{ position, rotation: [0, 0, 180] }}>
       <ambientLight intensity={4} />
       <OrbitControls makeDefault enableZoom={false} />
 

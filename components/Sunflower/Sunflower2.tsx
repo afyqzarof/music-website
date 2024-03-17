@@ -44,7 +44,7 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
     group.current.rotation.y += 0.012;
   });
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={[0, 1, 0]}>
       <group name="Scene">
         <group name="black_core" rotation={[0, 0, 1.57]}>
           <mesh

@@ -2,41 +2,31 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useState } from "react";
+import getRandomColor from "@/utils/getRandomColor";
 
 const Arrow = () => {
   const [color, setColor] = useState("white");
-  const colors = ["#2ae57e", "#33e52a", "#90e52a", "#18e7e7", "white"];
-  const randomColor = () => {
-    const index = Math.floor(Math.random() * colors.length);
-    return colors[index];
-  };
+
   useGSAP(() => {
-    const startTime = 4;
     const tl = gsap.timeline({ repeat: -1 });
-    // gsap.from("#arrow", {
-    //   opacity: 0,
-    //   duration: startTime,
-    //   ease: "power3.out",
-    // });
     tl.to("#arrow", { y: 15, duration: 1 });
     tl.to("#arrow", { y: 0, duration: 1 });
     tl.to("#arrow", { y: 15, duration: 1 });
     tl.to("#arrow", { y: 0, duration: 1 });
-    // tl.startTime(startTime);
   });
   return (
     <div
       className="h-[5rem] cursor-pointer transition-all hover:h-[7rem] sm:h-[6rem]"
       id="arrow"
       onClick={() => {
-        setColor(randomColor());
+        setColor(getRandomColor());
         window.scrollTo({
           top: document.body.scrollHeight,
           behavior: "smooth",
         });
       }}
       onMouseEnter={() => {
-        setColor(randomColor());
+        setColor(getRandomColor());
       }}
     >
       <svg

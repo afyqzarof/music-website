@@ -1,12 +1,8 @@
 "use client";
 import { useState } from "react";
 import { SVGProps } from "react";
+import getRandomColor from "@/utils/getRandomColor";
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => {
-  const colors = ["#2ae57e", "#33e52a", "#90e52a", "#18e7e7", "white"];
-  const getRandomColor = () => {
-    const index = Math.floor(Math.random() * colors.length);
-    return colors[index];
-  };
   const [color, setColor] = useState({
     a1: "white",
     f: "white",
