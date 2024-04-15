@@ -1,7 +1,6 @@
 import Bio from "@/components/Bio/Bio";
+import Btn from "@/components/Btn/Btn";
 import VideoHero from "@/components/VideoHero/VideoHero";
-import SvgComponent from "@/components/AfyqEyzarSvg/AfyqEyzarSvg";
-import Arrow from "@/components/Arrow/Arrow";
 
 export default function Home() {
   return (
@@ -9,11 +8,15 @@ export default function Home() {
       <section className="fixed block h-[100vh] w-screen sm:h-screen">
         <div className="relative h-full w-full">
           <div className="absolute inset-0 z-30 flex justify-center">
-            <SvgComponent />
+            <img
+              src="geo-afyq-eyzar.svg"
+              alt="afyq eyzar logo"
+              className="w-11/12 sm:w-2/3"
+            />
           </div>
           <VideoHero />
           <div className="absolute bottom-[25lvh] z-40 flex w-full justify-center sm:bottom-7">
-            <Arrow />
+            <Btn />
           </div>
         </div>
       </section>
